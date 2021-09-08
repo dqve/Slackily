@@ -22,7 +22,7 @@ export const ChannelListScreen = props => {
             backgroundColor: colors.background,
           },
         ]}>
-        <ScreenHeader title="getstream" showLogo />
+        <ScreenHeader title="Slackily" showLogo />
         <ChannelSearchButton />
 
         <View style={styles.listContainer}>

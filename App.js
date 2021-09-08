@@ -74,7 +74,6 @@ export default props => {
     let client;
 
     // Initializes Stream's chat client.
-    // Documentation: https://getstream.io/chat/docs/init_and_users/?language=js
     const initChat = async () => {
       client = new StreamChat('q95x9hkbyd6p', {
         timeout: 10000,
@@ -83,11 +82,6 @@ export default props => {
       const r = await client.setUser(user, USER_TOKENS[user.id]);
       console.log(r)
 
-      // We are going to store chatClient in following ChatClientService, so that it can be
-      // accessed in other places. Ideally one would store client in a context provider, so that
-      // component can re-render if client is updated. But in our case, client only gets updated
-      // when chat user is switched - and which case we re-render the entire chat application.
-      // So we don't need to worry about re-rendering every component on updating client.
       ChatClientService.setClient(client);
       setConnecting(false);
     };

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "slack-clone-expo",
-    "slug": "slack-clone-expo",
+    "name": "slack-clone",
+    "slug": "slack-clone",
     "platforms": [
       "ios",
       "android",
